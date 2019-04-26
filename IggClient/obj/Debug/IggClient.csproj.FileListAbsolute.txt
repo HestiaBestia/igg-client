@@ -1,0 +1,10 @@
+C:\Users\mewsp\source\repos\IggClient\IggClient\bin\Debug\IggClient.exe.config
+C:\Users\mewsp\source\repos\IggClient\IggClient\bin\Debug\IggClient.exe
+C:\Users\mewsp\source\repos\IggClient\IggClient\bin\Debug\IggClient.pdb
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.csprojAssemblyReference.cache
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.IGGResolver.resources
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.Properties.Resources.resources
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.csproj.GenerateResource.cache
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.csproj.CoreCompileInputs.cache
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.exe
+C:\Users\mewsp\source\repos\IggClient\IggClient\obj\Debug\IggClient.pdb
