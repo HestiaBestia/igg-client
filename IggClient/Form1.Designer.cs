@@ -48,7 +48,20 @@
             this.torrentLabel1 = new System.Windows.Forms.Label();
             this.magnetgrabButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.clientOpen = new System.Windows.Forms.Button();
+            this.openResolved = new System.Windows.Forms.Button();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.searchbarButton = new System.Windows.Forms.Button();
+            this.gamePicker = new System.Windows.Forms.ComboBox();
+            this.gameImage = new System.Windows.Forms.PictureBox();
+            this.sendtoDirect = new System.Windows.Forms.Button();
+            this.sendtoTorrent = new System.Windows.Forms.Button();
+            this.hasTorrent = new System.Windows.Forms.Label();
+            this.nextPage = new System.Windows.Forms.Button();
+            this.previousPage = new System.Windows.Forms.Button();
+            this.pageNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hestia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameImage)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -57,7 +70,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(278, 334);
+            this.button1.Location = new System.Drawing.Point(70, 3340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(265, 70);
             this.button1.TabIndex = 0;
@@ -70,7 +83,7 @@
             this.unresolvedBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.unresolvedBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.unresolvedBox.ForeColor = System.Drawing.Color.White;
-            this.unresolvedBox.Location = new System.Drawing.Point(34, 109);
+            this.unresolvedBox.Location = new System.Drawing.Point(34, 1090);
             this.unresolvedBox.Name = "unresolvedBox";
             this.unresolvedBox.Size = new System.Drawing.Size(732, 20);
             this.unresolvedBox.TabIndex = 1;
@@ -81,7 +94,7 @@
             this.resolvedBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.resolvedBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.resolvedBox.ForeColor = System.Drawing.Color.White;
-            this.resolvedBox.Location = new System.Drawing.Point(34, 261);
+            this.resolvedBox.Location = new System.Drawing.Point(34, 2610);
             this.resolvedBox.Name = "resolvedBox";
             this.resolvedBox.Size = new System.Drawing.Size(732, 20);
             this.resolvedBox.TabIndex = 2;
@@ -90,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 132);
+            this.label1.Location = new System.Drawing.Point(31, 1320);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 3;
@@ -101,7 +114,7 @@
             // 
             this.torrentLabel2.AutoSize = true;
             this.torrentLabel2.ForeColor = System.Drawing.Color.White;
-            this.torrentLabel2.Location = new System.Drawing.Point(31, 284);
+            this.torrentLabel2.Location = new System.Drawing.Point(31, 2840);
             this.torrentLabel2.Name = "torrentLabel2";
             this.torrentLabel2.Size = new System.Drawing.Size(141, 13);
             this.torrentLabel2.TabIndex = 4;
@@ -154,13 +167,14 @@
             this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.searchButton.FlatAppearance.BorderSize = 0;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchButton.ForeColor = System.Drawing.Color.Maroon;
+            this.searchButton.ForeColor = System.Drawing.Color.White;
             this.searchButton.Location = new System.Drawing.Point(175, 0);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(175, 50);
             this.searchButton.TabIndex = 7;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // directdlButton
             // 
@@ -225,7 +239,7 @@
             this.torrentUrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.torrentUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.torrentUrl.ForeColor = System.Drawing.Color.White;
-            this.torrentUrl.Location = new System.Drawing.Point(34, 109);
+            this.torrentUrl.Location = new System.Drawing.Point(34, 1090);
             this.torrentUrl.Name = "torrentUrl";
             this.torrentUrl.Size = new System.Drawing.Size(732, 20);
             this.torrentUrl.TabIndex = 13;
@@ -235,7 +249,7 @@
             this.magnetLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.magnetLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.magnetLink.ForeColor = System.Drawing.Color.White;
-            this.magnetLink.Location = new System.Drawing.Point(34, 261);
+            this.magnetLink.Location = new System.Drawing.Point(34, 2610);
             this.magnetLink.Name = "magnetLink";
             this.magnetLink.Size = new System.Drawing.Size(732, 20);
             this.magnetLink.TabIndex = 14;
@@ -244,7 +258,7 @@
             // 
             this.torrentLabel1.AutoSize = true;
             this.torrentLabel1.ForeColor = System.Drawing.Color.White;
-            this.torrentLabel1.Location = new System.Drawing.Point(31, 132);
+            this.torrentLabel1.Location = new System.Drawing.Point(31, 1320);
             this.torrentLabel1.Name = "torrentLabel1";
             this.torrentLabel1.Size = new System.Drawing.Size(193, 13);
             this.torrentLabel1.TabIndex = 15;
@@ -256,7 +270,7 @@
             this.magnetgrabButton.FlatAppearance.BorderSize = 0;
             this.magnetgrabButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.magnetgrabButton.ForeColor = System.Drawing.Color.White;
-            this.magnetgrabButton.Location = new System.Drawing.Point(278, 334);
+            this.magnetgrabButton.Location = new System.Drawing.Point(70, 3340);
             this.magnetgrabButton.Name = "magnetgrabButton";
             this.magnetgrabButton.Size = new System.Drawing.Size(265, 70);
             this.magnetgrabButton.TabIndex = 16;
@@ -268,11 +282,160 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 284);
+            this.label2.Location = new System.Drawing.Point(31, 2840);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "Resolved URL comes out here!";
+            // 
+            // clientOpen
+            // 
+            this.clientOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.clientOpen.FlatAppearance.BorderSize = 0;
+            this.clientOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clientOpen.ForeColor = System.Drawing.Color.White;
+            this.clientOpen.Location = new System.Drawing.Point(465, 3340);
+            this.clientOpen.Name = "clientOpen";
+            this.clientOpen.Size = new System.Drawing.Size(265, 70);
+            this.clientOpen.TabIndex = 18;
+            this.clientOpen.Text = "Open In Torrent Client";
+            this.clientOpen.UseVisualStyleBackColor = false;
+            this.clientOpen.Click += new System.EventHandler(this.clientOpen_Click);
+            // 
+            // openResolved
+            // 
+            this.openResolved.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.openResolved.FlatAppearance.BorderSize = 0;
+            this.openResolved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openResolved.ForeColor = System.Drawing.Color.White;
+            this.openResolved.Location = new System.Drawing.Point(465, 3340);
+            this.openResolved.Name = "openResolved";
+            this.openResolved.Size = new System.Drawing.Size(265, 70);
+            this.openResolved.TabIndex = 19;
+            this.openResolved.Text = "Open In Browser";
+            this.openResolved.UseVisualStyleBackColor = false;
+            this.openResolved.Click += new System.EventHandler(this.openResolved_Click);
+            // 
+            // searchBar
+            // 
+            this.searchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBar.ForeColor = System.Drawing.Color.White;
+            this.searchBar.Location = new System.Drawing.Point(12, 65);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(216, 20);
+            this.searchBar.TabIndex = 20;
+            // 
+            // searchbarButton
+            // 
+            this.searchbarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.searchbarButton.FlatAppearance.BorderSize = 0;
+            this.searchbarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchbarButton.ForeColor = System.Drawing.Color.White;
+            this.searchbarButton.Location = new System.Drawing.Point(234, 65);
+            this.searchbarButton.Name = "searchbarButton";
+            this.searchbarButton.Size = new System.Drawing.Size(85, 20);
+            this.searchbarButton.TabIndex = 21;
+            this.searchbarButton.Text = "Search";
+            this.searchbarButton.UseVisualStyleBackColor = false;
+            this.searchbarButton.Click += new System.EventHandler(this.searchbarButton_Click);
+            // 
+            // gamePicker
+            // 
+            this.gamePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.gamePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gamePicker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gamePicker.ForeColor = System.Drawing.Color.White;
+            this.gamePicker.FormattingEnabled = true;
+            this.gamePicker.Location = new System.Drawing.Point(12, 91);
+            this.gamePicker.Name = "gamePicker";
+            this.gamePicker.Size = new System.Drawing.Size(216, 21);
+            this.gamePicker.TabIndex = 22;
+            this.gamePicker.SelectedIndexChanged += new System.EventHandler(this.gamePicker_SelectedIndexChanged);
+            // 
+            // gameImage
+            // 
+            this.gameImage.Location = new System.Drawing.Point(410, 63);
+            this.gameImage.Name = "gameImage";
+            this.gameImage.Size = new System.Drawing.Size(375, 375);
+            this.gameImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gameImage.TabIndex = 23;
+            this.gameImage.TabStop = false;
+            // 
+            // sendtoDirect
+            // 
+            this.sendtoDirect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.sendtoDirect.FlatAppearance.BorderSize = 0;
+            this.sendtoDirect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sendtoDirect.ForeColor = System.Drawing.Color.DarkRed;
+            this.sendtoDirect.Location = new System.Drawing.Point(12, 348);
+            this.sendtoDirect.Name = "sendtoDirect";
+            this.sendtoDirect.Size = new System.Drawing.Size(175, 50);
+            this.sendtoDirect.TabIndex = 27;
+            this.sendtoDirect.Text = "Send To Direct Download";
+            this.sendtoDirect.UseVisualStyleBackColor = false;
+            // 
+            // sendtoTorrent
+            // 
+            this.sendtoTorrent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.sendtoTorrent.FlatAppearance.BorderSize = 0;
+            this.sendtoTorrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sendtoTorrent.ForeColor = System.Drawing.Color.White;
+            this.sendtoTorrent.Location = new System.Drawing.Point(12, 292);
+            this.sendtoTorrent.Name = "sendtoTorrent";
+            this.sendtoTorrent.Size = new System.Drawing.Size(175, 50);
+            this.sendtoTorrent.TabIndex = 28;
+            this.sendtoTorrent.Text = "Send To Magnet Grabber";
+            this.sendtoTorrent.UseVisualStyleBackColor = false;
+            this.sendtoTorrent.Click += new System.EventHandler(this.sendtoTorrent_Click);
+            // 
+            // hasTorrent
+            // 
+            this.hasTorrent.AutoSize = true;
+            this.hasTorrent.ForeColor = System.Drawing.Color.White;
+            this.hasTorrent.Location = new System.Drawing.Point(9, 401);
+            this.hasTorrent.Name = "hasTorrent";
+            this.hasTorrent.Size = new System.Drawing.Size(89, 13);
+            this.hasTorrent.TabIndex = 29;
+            this.hasTorrent.Text = "Has Torrent: N/A";
+            // 
+            // nextPage
+            // 
+            this.nextPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.nextPage.FlatAppearance.BorderSize = 0;
+            this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPage.ForeColor = System.Drawing.Color.White;
+            this.nextPage.Location = new System.Drawing.Point(234, 90);
+            this.nextPage.Name = "nextPage";
+            this.nextPage.Size = new System.Drawing.Size(85, 20);
+            this.nextPage.TabIndex = 30;
+            this.nextPage.Text = "Next";
+            this.nextPage.UseVisualStyleBackColor = false;
+            this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
+            // 
+            // previousPage
+            // 
+            this.previousPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.previousPage.FlatAppearance.BorderSize = 0;
+            this.previousPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousPage.ForeColor = System.Drawing.Color.White;
+            this.previousPage.Location = new System.Drawing.Point(234, 116);
+            this.previousPage.Name = "previousPage";
+            this.previousPage.Size = new System.Drawing.Size(85, 20);
+            this.previousPage.TabIndex = 31;
+            this.previousPage.Text = "Previous";
+            this.previousPage.UseVisualStyleBackColor = false;
+            this.previousPage.Click += new System.EventHandler(this.previousPage_Click);
+            // 
+            // pageNumber
+            // 
+            this.pageNumber.AutoSize = true;
+            this.pageNumber.ForeColor = System.Drawing.Color.White;
+            this.pageNumber.Location = new System.Drawing.Point(231, 140);
+            this.pageNumber.Name = "pageNumber";
+            this.pageNumber.Size = new System.Drawing.Size(68, 13);
+            this.pageNumber.TabIndex = 32;
+            this.pageNumber.Text = "Page:  1 of 1";
             // 
             // IGGResolver
             // 
@@ -280,6 +443,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pageNumber);
+            this.Controls.Add(this.previousPage);
+            this.Controls.Add(this.nextPage);
+            this.Controls.Add(this.hasTorrent);
+            this.Controls.Add(this.sendtoTorrent);
+            this.Controls.Add(this.sendtoDirect);
+            this.Controls.Add(this.gameImage);
+            this.Controls.Add(this.gamePicker);
+            this.Controls.Add(this.searchbarButton);
+            this.Controls.Add(this.searchBar);
+            this.Controls.Add(this.openResolved);
+            this.Controls.Add(this.clientOpen);
             this.Controls.Add(this.torrentLabel2);
             this.Controls.Add(this.torrentUrl);
             this.Controls.Add(this.credits2);
@@ -293,12 +468,12 @@
             this.Controls.Add(this.unresolvedBox);
             this.Controls.Add(this.credits1);
             this.Controls.Add(this.hestia);
-            this.Controls.Add(this.magnetLink);
             this.Controls.Add(this.resolvedBox);
-            this.Controls.Add(this.magnetgrabButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.torrentLabel1);
+            this.Controls.Add(this.magnetgrabButton);
+            this.Controls.Add(this.magnetLink);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IGGResolver";
@@ -307,6 +482,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.IGGResolver_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.IGGResolver_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.hestia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,6 +509,18 @@
         private System.Windows.Forms.Label torrentLabel1;
         private System.Windows.Forms.Button magnetgrabButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button clientOpen;
+        private System.Windows.Forms.Button openResolved;
+        private System.Windows.Forms.TextBox searchBar;
+        private System.Windows.Forms.Button searchbarButton;
+        private System.Windows.Forms.ComboBox gamePicker;
+        private System.Windows.Forms.PictureBox gameImage;
+        private System.Windows.Forms.Button sendtoDirect;
+        private System.Windows.Forms.Button sendtoTorrent;
+        private System.Windows.Forms.Label hasTorrent;
+        private System.Windows.Forms.Button nextPage;
+        private System.Windows.Forms.Button previousPage;
+        private System.Windows.Forms.Label pageNumber;
     }
 }
 
